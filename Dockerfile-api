@@ -1,7 +1,7 @@
 FROM alpine:3.22
 
 # Define the project name | 定义项目名称
-ARG PROJECT=testapi
+ARG PROJECT=api
 # Define the config file name | 定义配置文件名
 ARG CONFIG_FILE=testapi.yaml
 # Define the author | 定义作者
@@ -13,8 +13,8 @@ WORKDIR /app
 ENV PROJECT=${PROJECT}
 ENV CONFIG_FILE=${CONFIG_FILE}
 
-COPY ./${PROJECT}_api ./
-COPY ./etc/${CONFIG_FILE} ./etc/
+COPY ./api/${PROJECT}_api ./
+COPY ./api/etc/${CONFIG_FILE} ./etc/
 
 EXPOSE 8668
 
