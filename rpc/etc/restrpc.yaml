@@ -1,0 +1,28 @@
+Name: restrpc.rpc
+ListenOn: 0.0.0.0:8667
+
+DatabaseConf:
+  Type: mysql
+  Host: 143.92.48.225
+  Port: 16888
+  DBName: dstest
+  Username: dasheng # set your username
+  Password: aa123123 # set your password
+  MaxOpenConn: 100
+  SSLMode: disable
+  CacheTime: 5
+  Debug: false
+
+RedisConf:
+  Host: 143.92.48.225:6379
+  Pass: Aa69106464*.
+
+Log:
+  ServiceName: restrpcRpcLogger
+  Mode: file
+  Path: /home/data/logs/restrpc/rpc
+  Encoding: json
+  Level: info
+  Compress: false
+  KeepDays: 7
+  StackCoolDownMillis: 100

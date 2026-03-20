@@ -1,0 +1,24 @@
+Name: Testapi.api
+Host: 0.0.0.0
+Port: 8668
+Timeout: 2000
+
+Auth:
+  AccessSecret: # the same as core
+  AccessExpire: 259200
+
+CROSConf:
+  Address: '*'
+
+Log:
+  ServiceName: TestapiApiLogger
+  Mode: file
+  Path: /home/data/logs/Testapi/api
+  Level: info
+  Compress: false
+  Encoding: json
+  KeepDays: 7
+  StackCoolDownMillis: 100
+
+
+
