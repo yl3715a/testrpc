@@ -1,7 +1,7 @@
 FROM alpine:3.22
 
 # Define the project name | 定义项目名称
-ARG PROJECT=rpc
+ARG PROJECT=restrpc
 # Define the config file name | 定义配置文件名
 ARG CONFIG_FILE=restrpc.yaml
 # Define the author | 定义作者
@@ -16,9 +16,9 @@ ENV CONFIG_FILE=${CONFIG_FILE}
 ENV TZ=Asia/Shanghai
 RUN apk update --no-cache && apk add --no-cache tzdata
 
-COPY ./${PROJECT}_rpc ./
+COPY ./${PROJECT} ./
 COPY ./rpc/etc/${CONFIG_FILE} ./etc/
 
 EXPOSE 8667
 
-ENTRYPOINT ["./restrpc_rpc", "-f", "etc/restrpc.yaml"]
+ENTRYPOINT ["./restrpc", "-f", "etc/restrpc.yaml"]
